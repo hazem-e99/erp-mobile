@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   View, Text, TextInput, TouchableOpacity, StyleSheet,
-  KeyboardAvoidingView, Platform, Alert, ActivityIndicator,
+  KeyboardAvoidingView, Platform, Alert, ActivityIndicator, Image,
 } from 'react-native';
 import { useAuth } from '../AuthContext';
 import { COLORS } from '../constants';
@@ -30,9 +30,13 @@ export default function LoginScreen() {
     <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style={styles.card}>
         <View style={styles.logo}>
-          <Text style={styles.logoText}>🔥</Text>
+          <Image 
+            source={require('../../assets/Logo.png')} 
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
         </View>
-        <Text style={styles.title}>AgencyERP</Text>
+        <Text style={styles.title}>Intlakaa Agency</Text>
         <Text style={styles.subtitle}>Sign in to your account</Text>
 
         <TextInput
@@ -68,7 +72,8 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background, justifyContent: 'center', padding: 24 },
   card: { backgroundColor: COLORS.card, borderRadius: 16, padding: 24, alignItems: 'center' },
-  logo: { width: 56, height: 56, borderRadius: 16, backgroundColor: COLORS.primary, justifyContent: 'center', alignItems: 'center', marginBottom: 16 },
+  logo: { width: 100, height: 100, borderRadius: 20, backgroundColor: COLORS.primary, justifyContent: 'center', alignItems: 'center', marginBottom: 24 },
+  logoImage: { width: 90, height: 90 },
   logoText: { fontSize: 28 },
   title: { fontSize: 24, fontWeight: '700', color: COLORS.text, marginBottom: 4 },
   subtitle: { fontSize: 14, color: COLORS.textSecondary, marginBottom: 24 },

@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ERP App",
-    "slug": "erp-mobile",
-    "version": "1.0.0",
+    "name": "Intlakaa Agency",
+    "slug": "intlakaa-agency",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
